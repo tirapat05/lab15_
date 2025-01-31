@@ -18,4 +18,17 @@ int main(){
 	return 0;
 }
 
-//Do not modify source code above this line
+void shuffle(int &a,int &b,int &c,int &d){
+	int *x[]={&a,&b,&c,&d};
+	
+	int i=rand()%4;
+	int j=rand()%4;
+
+	while(i==j){
+		j=rand()%4;
+	}
+
+	int temp = *x[i];
+	*x[i]=*x[j];
+	*x[j]=temp;
+}
